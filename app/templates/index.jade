@@ -7,7 +7,7 @@ head
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css styles/vendor.css
     // bower:css
-    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
+
     // endbower
     // endbuild
     // build:css styles/main.css
@@ -16,6 +16,8 @@ head
     // build:js scripts/vendor/modernizr.js
     script(src='bower_components/modernizr/modernizr.js')
     // endbuild
+    script(type="text/javascript", src="https://www.google.com/recaptcha/api.js"
+      async defer)
   body
     //if lt IE 10
       p.browsehappy
@@ -25,7 +27,14 @@ head
     .wrapper
       header.header
         h1 Helllo Nied
-      main.main
+      section
+        aside
+          a(href="#", target="_blank") link
+          a(href="#", target="_blank") link
+          a(href="#", target="_blank") link
+          a(href="#", target="_blank") link
+        .posts
+          h2 Posts
       footer.footer
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
@@ -44,14 +53,17 @@ head
       }(window, document, 'script', 'ga'));
       ga('create', 'UA-XXXXX-X');
       ga('send', 'pageview');
+    //
+    script(type="text/javascript", src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en")
     // build:js scripts/vendor.js
     // bower:js
     script(src='bower_components/jquery/dist/jquery.js')
 
-    script(src='bower_components/bootstrap/dist/js/bootstrap.js')
     // endbower
     // endbuild
     // build:js scripts/plugins.js
+    script(type="text/javascript", src="bower_components/jquery-validate/dist/jquery.validate.js")
+    script(type="text/javascript", src="bower_components/gmap3/dist/gmap3.js")
     // endbuild
     // build:js scripts/main.js
     script(src='scripts/main.js')
