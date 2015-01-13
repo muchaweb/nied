@@ -5,7 +5,7 @@ var $              = require('gulp-load-plugins')();
 var mainBowerFiles = require('main-bower-files');
 var koutoiSwiss    = require('kouto-swiss');
 var jeet           = require('jeet');
-var del = require('del');
+var del            = require('del');
 
 
 
@@ -124,13 +124,13 @@ gulp.task('middleware', function() {
 
 gulp.task('clean', function() {
   del(['.tmp', 'dist'], function(err, deletedFiles){
-    console.log('Files deleted:' , deletedFiles.join(', '));
+    console.log('Files deleted');
   });
 });
 
 gulp.task('build', ['html', 'images:dist', 'fonts', 'middleware','extras']);
 
-gulp.task('default', ['clean','install','styles','scripts'], function() {
+gulp.task('default', ['clean','install','styles','scripts','templates'], function() {
 });
 
 gulp.task('connect', function() {
